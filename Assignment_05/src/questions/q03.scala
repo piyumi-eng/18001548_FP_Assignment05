@@ -2,22 +2,22 @@ package questions
 
 object q03 {
   def main(args:Array[String]){
-    class Account(idNo:String,n:Int,b:Double){
-      val nic:String=idNo 
-      val accnumber: Int = n 
+    class Account(IdNo:String,n:Int,b:Double){
+      val NIC:String=IdNo 
+      val accNo: Int = n 
       var  balance: Double = b
       
-     override def toString =   "["+nic+":"+accnumber +":"+ balance+"]"
+     override def toString =   "["+NIC+":"+accNo +":"+ balance+"]"
      
      def transfer(x:Account,y:Double)={
         this.balance=this.balance-y
         x.balance=x.balance+y
        }
     }
-    val accountA=new Account("9622727277V",191919101,200000)
-    val accountB=new Account("986952276V",363636102,75000)
-    val accountC=new Account("98116161616V",373777103,15000)
-    val accountD=new Account("9716161616V",999777103,115000)
+    val accountA=new Account("975662345V",123456789,50000)
+    val accountB=new Account("994567324V",234567890,75000)
+    val accountC=new Account("983456234V",135792468,100000)
+    val accountD=new Account("974509736V",246813579,200000)
 
      
     println("..........Before Transfer............\n")

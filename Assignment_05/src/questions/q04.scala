@@ -1,26 +1,26 @@
 package questions
 
-class Account(idNo:String,Acc_No:Int,bal:Double){
-	var nic=idNo
-	var accNo=Acc_No
+class Account(IdNo:String,AccNo:Int,bal:Double){
+	var NIC=IdNo
+	var accountNo=AccNo
 	var balance=bal
 }
 
 object q04 {
   def main(args:Array[String]){
 
-		var account1=new Account("BOC37377",727277,75000)
-		var account2=new Account("BOC37378",474777,100000)
-		var account3=new Account("BOC57379",393999,450000)
-		var account4=new Account("BOC39380",929929,-1500)
-		var account5=new Account("BOC35381",282888,-20000)
-		var account6=new Account("BOC37386",101002,0)
+		var account1=new Account("NDB56632",1234567,10000)
+		var account2=new Account("NDB67590",2345678,200000)
+		var account3=new Account("NDB12345",3456789,450000)
+		var account4=new Account("NDB23456",1357924,-1500)
+		var account5=new Account("NDB34567",2468135,-20000)
+		var account6=new Account("NDB45678",9070503,0)
 		
 		val bank:List[Account]=List(account1,account2,account3,account4,account5,account6)
 		
 		print("Overdraft Account Numbers   : ")
 		var OverDraftlist=overDraft(bank)
-		OverDraftlist.foreach(x=>print(x.accNo+"   "))
+		OverDraftlist.foreach(x=>print(x.accountNo+"   "))
 
 		var TotalBalance=bal(bank)
 		print("\nTotal Account Balance       : "+TotalBalance.balance)
